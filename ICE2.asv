@@ -1,0 +1,27 @@
+clearvars
+clc 
+
+eps = 1e-6;
+
+A = [0 1;
+    -2 -3];
+
+B = [0;
+    1];
+
+n = size(A,1);
+m = size(B,2);
+
+X = sdpvar(n);
+M = sdpvar(m,n);
+
+lmi1 = X - eps*eye(n) >= 0;
+lmi2 = A*X + X*A' + B*M + M'*B' + eps*eye(n) <= 0;
+
+lmis = [lmi1, lmi2];
+
+optimize(lmis);
+
+X = value(X);
+M = value(M);
+K = M/X;
