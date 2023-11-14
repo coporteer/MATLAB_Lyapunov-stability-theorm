@@ -1,4 +1,4 @@
-# This is code for my Intelligent Control course
+# This is code for DKU Intelligent Control course
 
 i am trying to make simulation about Lyapunov-stability-theorm
 
