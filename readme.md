@@ -1,5 +1,6 @@
 # This is code for DKU Intelligent Control course
 
-i am trying to make simulation about Lyapunov-stability-theorm
+I am trying to make simulation about Lyapunov-stability-theorm
 
 * Simulink is on the way
+* How to find block`s name?
